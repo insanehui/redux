@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 
+// 这是一个没有依赖state的组件
+// 所有的状态由props来决定
 class Counter extends Component {
   static propTypes = {
     value: PropTypes.number.isRequired,
@@ -22,22 +24,23 @@ class Counter extends Component {
     return (
       <p>
         Clicked: {value} times
-        {' '}
+
         <button onClick={onIncrement}>
           +
         </button>
-        {' '}
+
         <button onClick={onDecrement}>
           -
         </button>
-        {' '}
+
         <button onClick={this.incrementIfOdd}>
-          Increment if odd
+          如果是奇数就+1
         </button>
-        {' '}
+
         <button onClick={this.incrementAsync}>
-          Increment async
+          1秒后+1
         </button>
+
       </p>
     )
   }
