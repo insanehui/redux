@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 
+// 定义了一个函数式的组件
 let AddTodo = ({ dispatch }) => {
   let input
 
